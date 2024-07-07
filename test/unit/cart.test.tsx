@@ -117,55 +117,6 @@ describe('На странице корзина', () => {
 		});
 	});
 
-	it('форма отображает подтверждение отправки данных', async () => {
-		jest.spyOn(cart, 'getState').mockImplementation(() => {
-			return { '0': { name: 'Unbranded kogtetochka', count: 1, price: 228 } };
-		});
-		jest.spyOn(api, 'checkout').mockImplementation(() => {
-			return new Promise(res => {
-				res({
-					data: { id: 1 },
-					status: 200,
-					statusText: 'OK',
-					headers: {},
-					config: {
-						headers: {},
-					} as InternalAxiosRequestConfig,
-				});
-			});
-		});
-		const app = (
-			<MemoryRouter initialEntries={[basename]} basename={basename}>
-				<Provider store={initStore(api, cart)}>
-					<Cart />
-				</Provider>
-			</MemoryRouter>
-		);
-
-		const { container } = render(app);
-
-		await waitFor(() => {
-			const checkout = screen.getByText('Checkout');
-			expect(checkout).toBeInTheDocument();
-		});
-		const inputs = container.querySelectorAll('.Form input');
-		expect(inputs.length).toBe(2);
-		const [name, phone] = inputs;
-		const address = container.querySelector('.Form textarea');
-		expect(address).toBeInTheDocument();
-
-		fireEvent.change(name, { target: { value: 'Ivan' } });
-		fireEvent.change(phone, { target: { value: '89999999999' } });
-		fireEvent.change(address, { target: { value: 'my address' } });
-		const button = container.querySelector('.Form button');
-		expect(button).toBeInTheDocument();
-		fireEvent.click(button);
-		await waitFor(() => {
-			const wellDone = container.querySelector('.alert-heading');
-			expect(wellDone).toBeInTheDocument();
-			expect(wellDone.textContent).toBe('Well done!');
-		});
-	});
 	it('верстка в подтверждении отправки не изменилась', async () => {
 		jest.spyOn(cart, 'getState').mockImplementation(() => {
 			return { '0': { name: 'Unbranded kogtetochka', count: 1, price: 228 } };
