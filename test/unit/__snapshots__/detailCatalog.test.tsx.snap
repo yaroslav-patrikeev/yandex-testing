@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`На странице c подробной информацией верстка не изменилась 1`] = `
+<DocumentFragment>
+  <div
+    class="Application"
+  >
+    <nav
+      class="navbar navbar-expand-sm navbar-light bg-light"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="Application-Brand navbar-brand"
+          href="/hw/store"
+        >
+          Kogtetochka store
+        </a>
+        <button
+          aria-label="Toggle navigation"
+          class="Application-Toggler navbar-toggler"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="Application-Menu collapse navbar-collapse"
+        >
+          <div
+            class="navbar-nav"
+          >
+            <a
+              aria-current="page"
+              class="active nav-link"
+              href="/hw/store/catalog"
+            >
+              Catalog
+            </a>
+            <a
+              class="nav-link"
+              href="/hw/store/delivery"
+            >
+              Delivery
+            </a>
+            <a
+              class="nav-link"
+              href="/hw/store/contacts"
+            >
+              Contacts
+            </a>
+            <a
+              class="nav-link"
+              href="/hw/store/cart"
+            >
+              Cart (1)
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="container pt-4"
+    >
+      <div
+        class="Product"
+      >
+        <div
+          class="ProductDetails row"
+        >
+          <div
+            class="col-12 col-sm-5 col-lg-4"
+          >
+            <img
+              class="Image"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkMAYAADkANVKH3ScAAAAASUVORK5CYII="
+            />
+          </div>
+          <div
+            class="col-12 col-sm-7 col-lg-6"
+          >
+            <h1
+              class="ProductDetails-Name"
+            >
+              Unbranded kogtetochka
+            </h1>
+            <p
+              class="ProductDetails-Description"
+            >
+              Really Recycled kogtetochka for Chartreux
+            </p>
+            <p
+              class="ProductDetails-Price fs-3"
+            >
+              $55
+            </p>
+            <p>
+              <button
+                class="ProductDetails-AddToCart btn btn-primary btn-lg"
+              >
+                Add to Cart
+              </button>
+              <span
+                class="CartBadge text-success mx-3"
+              >
+                Item in cart
+              </span>
+            </p>
+            <dl>
+              <dt>
+                Color
+              </dt>
+              <dd
+                class="ProductDetails-Color text-capitalize"
+              >
+                green
+              </dd>
+              <dt>
+                Material
+              </dt>
+              <dd
+                class="ProductDetails-Material text-capitalize"
+              >
+                Granite
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

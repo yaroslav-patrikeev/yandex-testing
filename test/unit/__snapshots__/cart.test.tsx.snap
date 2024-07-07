@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`На странице корзина верстка в подтверждении отправки не изменилась 1`] = `
+<DocumentFragment>
+  <div
+    class="Cart"
+  >
+    <div
+      class="row mb-4"
+    >
+      <div
+        class="col"
+      >
+        <h1>
+          Shopping cart
+        </h1>
+        <div
+          class="row my-2"
+        >
+          <div
+            class="col-12 col-sm-8 col-md-6"
+          >
+            <div
+              class="Cart-SuccessMessage alert alert-success"
+            >
+              <h4
+                class="alert-heading"
+              >
+                Well done!
+              </h4>
+              <p>
+                Order #
+                <strong
+                  class="Cart-Number"
+                >
+                  1
+                </strong>
+                 has been successfully completed.
+              </p>
+              <hr />
+              <p
+                class="mb-0"
+              >
+                Please wait for confirmation of delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+        Cart is empty. Please select products in the 
+        <a
+          href="/hw/store/catalog"
+        >
+          catalog
+        </a>
+        .
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
